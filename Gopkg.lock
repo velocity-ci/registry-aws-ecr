@@ -2,6 +2,7 @@
 
 
 [[projects]]
+  digest = "1:f56ed26e19903b2eb43ded3f40101782c79f34cc6571a11671742fbf578d42f6"
   name = "github.com/aws/aws-sdk-go"
   packages = [
     "aws",
@@ -31,25 +32,34 @@
     "private/protocol/rest",
     "private/protocol/xml/xmlutil",
     "service/ecr",
-    "service/sts"
+    "service/sts",
   ]
+  pruneopts = "UT"
   revision = "c8c4e0c0514d87f930c1342fef390db5329928b7"
   version = "v1.13.20"
 
 [[projects]]
+  digest = "1:db18b69d50d54aadb436b8639e2b55b5ece5f595a601d9eb461fabd998ebb288"
   name = "github.com/go-ini/ini"
   packages = ["."]
+  pruneopts = "UT"
   revision = "6333e38ac20b8949a8dd68baa3650f4dee8f39f0"
   version = "v1.33.0"
 
 [[projects]]
+  digest = "1:e22af8c7518e1eab6f2eab2b7d7558927f816262586cd6ed9f349c97a6c285c4"
   name = "github.com/jmespath/go-jmespath"
   packages = ["."]
+  pruneopts = "UT"
   revision = "0b12d6b5"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "1826652c7e20c24b5b75b12ebecb572726593b723d33bc5e04c8deec747bc953"
+  input-imports = [
+    "github.com/aws/aws-sdk-go/aws",
+    "github.com/aws/aws-sdk-go/aws/session",
+    "github.com/aws/aws-sdk-go/service/ecr",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
