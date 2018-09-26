@@ -62,7 +62,7 @@ func main() {
 func finish(out *output) {
 	o, _ := json.Marshal(out)
 
-	fmt.Printf("%s", o)
+	fmt.Printf("%s\n", o)
 }
 
 type output struct {
